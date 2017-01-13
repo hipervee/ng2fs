@@ -17,41 +17,16 @@ namespace Northwind.Web.Api
         private readonly IEmployeeService _employeeService;
         private readonly IUnitOfWorkAsync _unitOfWorkAsync;
 
-
-        public EmployeeController(
-            IUnitOfWorkAsync unitOfWorkAsync,
-            IEmployeeService employeeService)
+        public EmployeeController(IUnitOfWorkAsync unitOfWorkAsync, IEmployeeService employeeService)
         {
             _unitOfWorkAsync = unitOfWorkAsync;
             _employeeService = employeeService;
         }
 
-        // GET: odata/Customers
         [HttpGet]
         public IQueryable<Employee> Get()
         {
             return _employeeService.Queryable();
         }
-
-
-    }
-
-    public interface IGridFilterRequest
-    {
-        int skip { get; set; }
-        int take { get; set; }
-    }
-
-    public class GridFilterRequest : IGridFilterRequest
-    {
-        public int skip { get; set; }
-        public int take { get; set; }
-    }
-
-    public class GridResponse
-    {
-        public int totalRecords { get; set; }
-        public int currentPage { get; set; }
-        public int pageSize { get; set;  }
     }
 }
