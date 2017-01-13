@@ -1,15 +1,14 @@
 import {Component, OnInit} from "@angular/core";
 import { IMovie} from "./movie";
 import { MovieFilterPipe } from "./movie-filter.pipe";
-import {ReviewComponent} from "../shared/review.component";
-import {MovieService} from "./movies.service";
+
+import { MovieService } from "./movies.service";
 
 @Component({
     selector: "mm-movies",
     templateUrl: "app/movies/movie-list.component.html",
     styleUrls: ["app/movies/movie-list.component.css"],
     pipes: [MovieFilterPipe],
-    directives: [ReviewComponent]
 })
 
 export class MovieListComponent implements OnInit {

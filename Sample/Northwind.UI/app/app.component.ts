@@ -1,6 +1,4 @@
 import { Component } from "@angular/core";
-import { MovieListComponent } from "./movies/movie-list.component";
-import { EmployeeListComponent } from "./employee/employee-list.component";
 import { MovieService } from "./movies/movies.service";
 import { EmployeeService } from "./employee/employee.service";
 import "rxjs/Rx";
