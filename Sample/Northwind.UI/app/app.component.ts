@@ -1,9 +1,8 @@
-import {Component} from "@angular/core";
+import { Component } from "@angular/core";
 import { MovieListComponent } from "./movies/movie-list.component";
 import { EmployeeListComponent } from "./employee/employee-list.component";
 import { MovieService } from "./movies/movies.service";
 import { EmployeeService } from "./employee/employee.service";
-import {HTTP_PROVIDERS} from "@angular/http";
 import "rxjs/Rx";
 
 @Component({
@@ -13,8 +12,8 @@ import "rxjs/Rx";
                 <mm-employees></mm-employees>
                 </div>
                 `,
-    directives: [MovieListComponent, EmployeeListComponent],
-    providers: [MovieService, EmployeeService, HTTP_PROVIDERS]
+
+    providers: [MovieService, EmployeeService]
 })
 
 export class AppComponent {

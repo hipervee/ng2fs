@@ -9,11 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var movie_list_component_1 = require("./movies/movie-list.component");
-var employee_list_component_1 = require("./employee/employee-list.component");
 var movies_service_1 = require("./movies/movies.service");
 var employee_service_1 = require("./employee/employee.service");
-var http_1 = require("@angular/http");
 require("rxjs/Rx");
 var AppComponent = (function () {
     function AppComponent() {
@@ -23,8 +20,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: "my-app",
             template: "<h1>{{welcomeMessage}}</h1>\n                <div>\n                <mm-employees></mm-employees>\n                </div>\n                ",
-            directives: [movie_list_component_1.MovieListComponent, employee_list_component_1.EmployeeListComponent],
-            providers: [movies_service_1.MovieService, employee_service_1.EmployeeService, http_1.HTTP_PROVIDERS]
+            providers: [movies_service_1.MovieService, employee_service_1.EmployeeService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
