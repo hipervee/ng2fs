@@ -25,7 +25,7 @@ var ReviewComponent = (function () {
     ], ReviewComponent.prototype, "rating", void 0);
     __decorate([
         core_1.Output(), 
-        __metadata('design:type', core_1.EventEmitter)
+        __metadata('design:type', (typeof (_a = typeof core_1.EventEmitter !== 'undefined' && core_1.EventEmitter) === 'function' && _a) || Object)
     ], ReviewComponent.prototype, "ratingClicked", void 0);
     ReviewComponent = __decorate([
         core_1.Component({
@@ -36,6 +36,7 @@ var ReviewComponent = (function () {
         __metadata('design:paramtypes', [])
     ], ReviewComponent);
     return ReviewComponent;
+    var _a;
 }());
 exports.ReviewComponent = ReviewComponent;
 //# sourceMappingURL=review.component.js.map

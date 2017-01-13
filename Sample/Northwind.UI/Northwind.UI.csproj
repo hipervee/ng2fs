@@ -128,7 +128,9 @@
     <TypeScriptCompile Include="app\movies\movie-list.component.ts" />
     <TypeScriptCompile Include="app\movies\movie.ts" />
     <TypeScriptCompile Include="app\movies\movies.service.ts" />
+    <TypeScriptCompile Include="app\polyfills.ts" />
     <TypeScriptCompile Include="app\shared\review.component.ts" />
+    <TypeScriptCompile Include="app\vendor.ts" />
     <TypeScriptCompile Include="typings\globals\angular-protractor\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\core-js\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\jasmine\index.d.ts" />
