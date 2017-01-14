@@ -2,8 +2,8 @@ import {Component, OnChanges, Input, Output, EventEmitter} from "@angular/core";
 
 @Component({
     selector: "md-review",
-    templateUrl: "app/shared/review.component.html",
-    styleUrls: ["app/shared/review.component.css"]
+    templateUrl: "./review.component.html",
+    styleUrls: ["./review.component.css"]
 })
 export class ReviewComponent implements OnChanges {
     @Input() rating: number;

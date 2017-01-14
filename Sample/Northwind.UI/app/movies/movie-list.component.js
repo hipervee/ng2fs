@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var movie_filter_pipe_1 = require("./movie-filter.pipe");
 var movies_service_1 = require("./movies.service");
 var MovieListComponent = (function () {
     function MovieListComponent(_movieService) {
@@ -35,8 +34,7 @@ var MovieListComponent = (function () {
         core_1.Component({
             selector: "mm-movies",
             templateUrl: "app/movies/movie-list.component.html",
-            styleUrls: ["app/movies/movie-list.component.css"],
-            pipes: [movie_filter_pipe_1.MovieFilterPipe],
+            styleUrls: ["app/movies/movie-list.component.css"]
         }), 
         __metadata('design:paramtypes', [movies_service_1.MovieService])
     ], MovieListComponent);

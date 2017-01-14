@@ -16,13 +16,14 @@ var http_1 = require('@angular/http');
 var review_component_1 = require("./shared/review.component");
 var movie_list_component_1 = require("./movies/movie-list.component");
 var employee_list_component_1 = require("./employee/employee-list.component");
+var movie_filter_pipe_1 = require("./movies/movie-filter.pipe");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
-            declarations: [app_component_1.AppComponent, movie_list_component_1.MovieListComponent, employee_list_component_1.EmployeeListComponent, review_component_1.ReviewComponent],
+            declarations: [app_component_1.AppComponent, movie_list_component_1.MovieListComponent, employee_list_component_1.EmployeeListComponent, review_component_1.ReviewComponent, movie_filter_pipe_1.MovieFilterPipe],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

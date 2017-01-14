@@ -7,7 +7,7 @@ import "rxjs/Rx";
     selector: "my-app",
     template: `<h1>{{welcomeMessage}}</h1>
                 <div>
-                <mm-employees></mm-employees>
+                <mm-movies></mm-movies>
                 </div>
                 `,
 
