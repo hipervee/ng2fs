@@ -45,94 +45,242 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="build\app.html" />
+    <Content Include="build\assets\app-803fffce85.js" />
+    <Content Include="build\assets\bundle-7983780bb9.css" />
+    <Content Include="build\assets\images\ng2.jpg" />
+    <Content Include="build\assets\lib-e8b1eef310.js" />
+    <Content Include="build\favicon.ico" />
+    <Content Include="build\fonts\fontawesome-webfont.svg" />
+    <Content Include="build\fonts\Roboto\Roboto-Regular-webfont.svg" />
+    <Content Include="build\home.css" />
+    <Content Include="build\home.html" />
+    <Content Include="build\index.html" />
+    <Content Include="build\navbar.html" />
+    <Content Include="build\todolist.html" />
+    <Content Include="config\gulp\config.js" />
+    <Content Include="config\gulp\tasks\build.js" />
+    <Content Include="config\gulp\tasks\clean.js" />
+    <Content Include="config\gulp\tasks\component.js" />
+    <Content Include="config\gulp\tasks\sass.js" />
+    <Content Include="config\gulp\tasks\serve.js" />
+    <Content Include="config\gulp\tasks\test.js" />
+    <Content Include="config\gulp\tasks\typescript.js" />
+    <Content Include="config\gulp\utils\dashboard.js" />
+    <Content Include="config\gulp\utils\env-vars.js" />
+    <Content Include="config\gulp\utils\env.js" />
+    <Content Include="config\test\karma-test-shim.js" />
+    <Content Include="config\test\karma.conf.js" />
+    <Content Include="config\test\protractor.conf.js" />
+    <Content Include="gulpfile.js" />
     <Content Include="packages.config" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="package.json" />
+    <Content Include="report\remap\html-report\app\app.component.ts.html" />
+    <Content Include="report\remap\html-report\app\index.html" />
+    <Content Include="report\remap\html-report\app\shared\constant\env.ts.html" />
+    <Content Include="report\remap\html-report\app\shared\constant\index.html" />
+    <Content Include="report\remap\html-report\app\shared\constant\index.ts.html" />
+    <Content Include="report\remap\html-report\app\shared\constant\main.ts.html" />
+    <Content Include="report\remap\html-report\app\shared\index.html" />
+    <Content Include="report\remap\html-report\app\shared\index.ts.html" />
+    <Content Include="report\remap\html-report\app\shared\navbar\index.html" />
+    <Content Include="report\remap\html-report\app\shared\navbar\index.ts.html" />
+    <Content Include="report\remap\html-report\app\shared\navbar\navbar.component.ts.html" />
+    <Content Include="report\remap\html-report\app\shared\navbar\navbar.module.ts.html" />
+    <Content Include="report\remap\html-report\app\todolist\completed-filter.pipe.ts.html" />
+    <Content Include="report\remap\html-report\app\todolist\index.html" />
+    <Content Include="report\remap\html-report\app\todolist\index.ts.html" />
+    <Content Include="report\remap\html-report\app\todolist\todo.model.ts.html" />
+    <Content Include="report\remap\html-report\app\todolist\todolist.component.ts.html" />
+    <Content Include="report\remap\html-report\app\todolist\todolist.module.ts.html" />
+    <Content Include="report\remap\html-report\app\todolist\todolist.routes.ts.html" />
+    <Content Include="report\remap\html-report\base.css" />
+    <Content Include="report\remap\html-report\index.html" />
+    <Content Include="report\remap\html-report\prettify.css" />
+    <Content Include="report\remap\html-report\prettify.js" />
+    <Content Include="report\remap\html-report\sort-arrow-sprite.png" />
+    <Content Include="report\remap\html-report\sorter.js" />
+    <Content Include="report\remap\text-summary.txt" />
+    <Content Include="src\app\app.html" />
+    <Content Include="src\app\employeelist\employeelist.html" />
+    <Content Include="src\app\home\home.css" />
+    <Content Include="src\app\home\home.html" />
+    <Content Include="src\app\shared\navbar\navbar.html" />
+    <Content Include="src\app\todolist\todolist.html" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-Regular-webfont.svg" />
+    <Content Include="src\assets\images\ng2.jpg" />
+    <Content Include="src\assets\styles\main.css" />
+    <Content Include="src\favicon.ico" />
+    <Content Include="src\index.html" />
+    <Content Include="src\systemjs.conf.js" />
+    <Content Include="src\tmp\app\app.component.js" />
+    <Content Include="src\tmp\app\app.component.spec.js" />
+    <Content Include="src\tmp\app\app.html" />
+    <Content Include="src\tmp\app\app.module.js" />
+    <Content Include="src\tmp\app\app.providers.js" />
+    <Content Include="src\tmp\app\app.routing.js" />
+    <Content Include="src\tmp\app\bundle.js" />
+    <Content Include="src\tmp\app\employeelist\employee.model.js" />
+    <Content Include="src\tmp\app\employeelist\employeelist.component.js" />
+    <Content Include="src\tmp\app\employeelist\employeelist.html" />
+    <Content Include="src\tmp\app\employeelist\employeelist.module.js" />
+    <Content Include="src\tmp\app\employeelist\employeelist.routes.js" />
+    <Content Include="src\tmp\app\employeelist\index.js" />
+    <Content Include="src\tmp\app\home\home.component.js" />
+    <Content Include="src\tmp\app\home\home.css" />
+    <Content Include="src\tmp\app\home\home.html" />
+    <Content Include="src\tmp\app\home\home.module.js" />
+    <Content Include="src\tmp\app\home\home.routes.js" />
+    <Content Include="src\tmp\app\home\index.js" />
+    <Content Include="src\tmp\app\main.js" />
+    <Content Include="src\tmp\app\shared\constant\env.js" />
+    <Content Include="src\tmp\app\shared\constant\env.model.js" />
+    <Content Include="src\tmp\app\shared\constant\index.js" />
+    <Content Include="src\tmp\app\shared\constant\main.js" />
+    <Content Include="src\tmp\app\shared\index.js" />
+    <Content Include="src\tmp\app\shared\navbar\index.js" />
+    <Content Include="src\tmp\app\shared\navbar\navbar.component.js" />
+    <Content Include="src\tmp\app\shared\navbar\navbar.html" />
+    <Content Include="src\tmp\app\shared\navbar\navbar.module.js" />
+    <Content Include="src\tmp\app\todolist\completed-filter.pipe.js" />
+    <Content Include="src\tmp\app\todolist\completed-filter.pipe.spec.js" />
+    <Content Include="src\tmp\app\todolist\index.js" />
+    <Content Include="src\tmp\app\todolist\todo.model.js" />
+    <Content Include="src\tmp\app\todolist\todolist.component.js" />
+    <Content Include="src\tmp\app\todolist\todolist.component.spec.js" />
+    <Content Include="src\tmp\app\todolist\todolist.html" />
+    <Content Include="src\tmp\app\todolist\todolist.module.js" />
+    <Content Include="src\tmp\app\todolist\todolist.routes.js" />
+    <Content Include="src\tmp\test\test-helpers\global\env.js" />
+    <Content Include="src\tmp\test\test-helpers\global\matchers.js" />
+    <Content Include="src\tmp\test\test-helpers\setup.js" />
     <Content Include="tsconfig.json" />
-    <Content Include="typings.json" />
-    <Content Include="app\app.component.js.map" />
-    <Content Include="app\app.module.js.map" />
-    <Content Include="app\home\welcome.component.js.map" />
-    <Content Include="app\home\WelcomeComponent.js.map" />
-    <Content Include="app\main.js.map" />
-    <Content Include="app\movies\movie-filter.pipe.js.map" />
-    <Content Include="app\movies\movie-list.component.js.map" />
-    <Content Include="app\movies\movie.js.map" />
-    <Content Include="app\movies\movies.service.js.map" />
-    <Content Include="app\shared\review.component.js.map" />
-    <Content Include="api\movies\movies.json" />
-    <Content Include="typings\globals\angular-protractor\typings.json" />
-    <Content Include="typings\globals\core-js\typings.json" />
-    <Content Include="typings\globals\jasmine\typings.json" />
-    <Content Include="typings\globals\node\typings.json" />
-    <Content Include="typings\globals\selenium-webdriver\typings.json" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
-    <Content Include="app\app.component.js" />
-    <Content Include="app\app.module.js" />
-    <Content Include="app\assets\images\logo.jpg" />
-    <Content Include="app\employee\employee-list.component.html" />
-    <Content Include="app\employee\employee-list.component.css" />
-    <Content Include="app\home\welcome.component.html" />
-    <Content Include="app\home\welcome.component.js" />
-    <Content Include="app\home\WelcomeComponent.js" />
-    <Content Include="app\main.js" />
-    <Content Include="app\movies\movie-filter.pipe.js" />
-    <Content Include="app\movies\movie-list.component.css" />
-    <Content Include="app\movies\movie-list.component.html" />
-    <Content Include="app\movies\movie-list.component.js" />
-    <Content Include="app\movies\movie.js" />
-    <Content Include="app\movies\movies.service.js" />
-    <Content Include="app\shared\review.component.css" />
-    <Content Include="app\shared\review.component.html" />
-    <Content Include="app\shared\review.component.js" />
-    <Content Include="content\bootstrap.min.css" />
-    <Content Include="content\site.css" />
-    <Content Include="Index.html" />
-    <Content Include="scripts\bootstrap.min.js" />
-    <Content Include="scripts\jquery.min.js" />
-    <Content Include="scripts\modernizr.js" />
-    <Content Include="styles.css" />
-    <Content Include="systemjs.config.js" />
-    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="fonts\" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="app\app.component.ts" />
-    <TypeScriptCompile Include="app\app.module.ts" />
-    <TypeScriptCompile Include="app\employee\employee.ts" />
-    <TypeScriptCompile Include="app\employee\employee-list.component.ts" />
-    <TypeScriptCompile Include="app\employee\employee.service.ts" />
-    <TypeScriptCompile Include="app\home\welcome.component.ts" />
-    <TypeScriptCompile Include="app\main.ts" />
-    <TypeScriptCompile Include="app\movies\movie-filter.pipe.ts" />
-    <TypeScriptCompile Include="app\movies\movie-list.component.ts" />
-    <TypeScriptCompile Include="app\movies\movie.ts" />
-    <TypeScriptCompile Include="app\movies\movies.service.ts" />
-    <TypeScriptCompile Include="app\shared\review.component.ts" />
-    <TypeScriptCompile Include="typings\globals\angular-protractor\index.d.ts" />
-    <TypeScriptCompile Include="typings\globals\core-js\index.d.ts" />
-    <TypeScriptCompile Include="typings\globals\jasmine\index.d.ts" />
-    <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
-    <TypeScriptCompile Include="typings\globals\selenium-webdriver\index.d.ts" />
-    <TypeScriptCompile Include="typings\index.d.ts" />
+    <TypeScriptCompile Include="config\env\env.ts" />
+    <TypeScriptCompile Include="e2e\home\home.spec.ts" />
+    <TypeScriptCompile Include="src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\app.providers.ts" />
+    <TypeScriptCompile Include="src\app\app.routing.ts" />
+    <TypeScriptCompile Include="src\app\bundle.ts" />
+    <TypeScriptCompile Include="src\app\employeelist\employee.model.ts" />
+    <TypeScriptCompile Include="src\app\employeelist\employeelist.component.ts" />
+    <TypeScriptCompile Include="src\app\employeelist\employeelist.module.ts" />
+    <TypeScriptCompile Include="src\app\employeelist\employeelist.routes.ts" />
+    <TypeScriptCompile Include="src\app\employeelist\index.ts" />
+    <TypeScriptCompile Include="src\app\home\home.component.ts" />
+    <TypeScriptCompile Include="src\app\home\home.module.ts" />
+    <TypeScriptCompile Include="src\app\home\home.routes.ts" />
+    <TypeScriptCompile Include="src\app\home\index.ts" />
+    <TypeScriptCompile Include="src\app\main.ts" />
+    <TypeScriptCompile Include="src\app\shared\constant\env.model.ts" />
+    <TypeScriptCompile Include="src\app\shared\constant\env.ts" />
+    <TypeScriptCompile Include="src\app\shared\constant\index.ts" />
+    <TypeScriptCompile Include="src\app\shared\constant\main.ts" />
+    <TypeScriptCompile Include="src\app\shared\index.ts" />
+    <TypeScriptCompile Include="src\app\shared\navbar\index.ts" />
+    <TypeScriptCompile Include="src\app\shared\navbar\navbar.component.ts" />
+    <TypeScriptCompile Include="src\app\shared\navbar\navbar.module.ts" />
+    <TypeScriptCompile Include="src\app\todolist\completed-filter.pipe.spec.ts" />
+    <TypeScriptCompile Include="src\app\todolist\completed-filter.pipe.ts" />
+    <TypeScriptCompile Include="src\app\todolist\index.ts" />
+    <TypeScriptCompile Include="src\app\todolist\todo.model.ts" />
+    <TypeScriptCompile Include="src\app\todolist\todolist.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\todolist\todolist.component.ts" />
+    <TypeScriptCompile Include="src\app\todolist\todolist.module.ts" />
+    <TypeScriptCompile Include="src\app\todolist\todolist.routes.ts" />
+    <TypeScriptCompile Include="src\manual_typings\jasmine.d.ts" />
+    <TypeScriptCompile Include="src\test\test-helpers\global\env.ts" />
+    <TypeScriptCompile Include="src\test\test-helpers\global\matchers.ts" />
+    <TypeScriptCompile Include="src\test\test-helpers\setup.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="build\fonts\fontawesome-webfont.eot" />
+    <Content Include="build\fonts\fontawesome-webfont.ttf" />
+    <Content Include="build\fonts\fontawesome-webfont.woff" />
+    <Content Include="build\fonts\fontawesome-webfont.woff2" />
+    <Content Include="build\fonts\FontAwesome.otf" />
+    <Content Include="build\fonts\Roboto\Roboto-Regular-webfont.eot" />
+    <Content Include="build\fonts\Roboto\Roboto-Regular-webfont.ttf" />
+    <Content Include="build\fonts\Roboto\Roboto-Regular-webfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="report\remap\coverage.json" />
+    <Content Include="report\remap\lcov.info" />
+    <Content Include="report\report-json\coverage-final.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\shared\constant\.gitignore" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-Regular-webfont.eot" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-Regular-webfont.ttf" />
+    <Content Include="src\assets\fonts\Roboto\Roboto-Regular-webfont.woff" />
+    <Content Include="src\assets\styles\bootstrap.scss" />
+    <Content Include="src\assets\styles\fonts.scss" />
+    <Content Include="src\assets\styles\functions.scss" />
+    <Content Include="src\assets\styles\main.scss" />
+    <Content Include="src\assets\styles\mixins.scss" />
+    <Content Include="src\assets\styles\module.scss" />
+    <Content Include="src\assets\styles\overrides.scss" />
+    <Content Include="src\assets\styles\variables.scss" />
+    <Content Include="src\assets\styles\_bootstrap.variables.scss" />
+    <Content Include="src\tmp\app\app.component.js.map" />
+    <Content Include="src\tmp\app\app.component.spec.js.map" />
+    <Content Include="src\tmp\app\app.module.js.map" />
+    <Content Include="src\tmp\app\app.providers.js.map" />
+    <Content Include="src\tmp\app\app.routing.js.map" />
+    <Content Include="src\tmp\app\bundle.js.map" />
+    <Content Include="src\tmp\app\employeelist\employee.model.js.map" />
+    <Content Include="src\tmp\app\employeelist\employeelist.component.js.map" />
+    <Content Include="src\tmp\app\employeelist\employeelist.module.js.map" />
+    <Content Include="src\tmp\app\employeelist\employeelist.routes.js.map" />
+    <Content Include="src\tmp\app\employeelist\index.js.map" />
+    <Content Include="src\tmp\app\home\home.component.js.map" />
+    <Content Include="src\tmp\app\home\home.module.js.map" />
+    <Content Include="src\tmp\app\home\home.routes.js.map" />
+    <Content Include="src\tmp\app\home\index.js.map" />
+    <Content Include="src\tmp\app\main.js.map" />
+    <Content Include="src\tmp\app\shared\constant\env.js.map" />
+    <Content Include="src\tmp\app\shared\constant\env.model.js.map" />
+    <Content Include="src\tmp\app\shared\constant\index.js.map" />
+    <Content Include="src\tmp\app\shared\constant\main.js.map" />
+    <Content Include="src\tmp\app\shared\index.js.map" />
+    <Content Include="src\tmp\app\shared\navbar\index.js.map" />
+    <Content Include="src\tmp\app\shared\navbar\navbar.component.js.map" />
+    <Content Include="src\tmp\app\shared\navbar\navbar.module.js.map" />
+    <Content Include="src\tmp\app\todolist\completed-filter.pipe.js.map" />
+    <Content Include="src\tmp\app\todolist\completed-filter.pipe.spec.js.map" />
+    <Content Include="src\tmp\app\todolist\index.js.map" />
+    <Content Include="src\tmp\app\todolist\todo.model.js.map" />
+    <Content Include="src\tmp\app\todolist\todolist.component.js.map" />
+    <Content Include="src\tmp\app\todolist\todolist.component.spec.js.map" />
+    <Content Include="src\tmp\app\todolist\todolist.module.js.map" />
+    <Content Include="src\tmp\app\todolist\todolist.routes.js.map" />
+    <Content Include="src\tmp\test\test-helpers\global\env.js.map" />
+    <Content Include="src\tmp\test\test-helpers\global\matchers.js.map" />
+    <Content Include="src\tmp\test\test-helpers\setup.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".travis.yml" />
+    <Content Include="appveyor.yml" />
+    <Content Include="env.example.json" />
+    <Content Include="LICENSE" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.md" />
+    <Content Include="tslint.json" />
+    <Content Include="yarn.lock" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
