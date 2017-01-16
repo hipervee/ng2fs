@@ -2,6 +2,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { EmployeeListComponent } from './index';
+import { HttpModule} from '@angular/http';
+
 
 @NgModule({
     declarations: [
@@ -9,7 +11,8 @@ import { EmployeeListComponent } from './index';
     ],
     imports: [
         FormsModule,
-        BrowserModule
+        BrowserModule,
+        HttpModule
     ],
     exports: [
         EmployeeListComponent

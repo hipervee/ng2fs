@@ -1,8 +1,23 @@
-﻿<div class="panel panel-default">
+<div class="panel panel-default">
     <div class="panel-heading">
         Employee List
     </div>
     <div class="panel-body">
-
+        <table class="table table-responsive" *ngIf="employees && employees.length">
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of employees">
+                    <td>{{employee.EmployeeID}}</td>
+                    <td>{{employee.LastName + ' , ' + employee.FirstName}}</td>
+                    <td>{{employee.Title}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
