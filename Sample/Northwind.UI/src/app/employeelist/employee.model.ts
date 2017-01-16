@@ -1,9 +1,6 @@
-export class IEmployee {
-    public FirstName: string;
-    public LastName: string;
-
-    constructor() {
-        this.FirstName = '';
-        this.LastName = '';
-    }
+export interface IEmployee {
+    EmployeeID: number;
+    FirstName: string;
+    LastName: string;
+    Title: string;
 }
