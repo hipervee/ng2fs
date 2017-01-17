@@ -7,7 +7,7 @@ import { appRoutingProviders, routing } from './app.routing';
 import { NavbarModule } from './shared';
 import { HomeModule } from './home/home.module';
 import { TodolistModule } from './todolist/todolist.module';
-import { EmployeeListModule } from './employeelist/employeelist.module';
+import { EmployeeListModule } from './employeelist/index';
 
 @NgModule({
     declarations: [
