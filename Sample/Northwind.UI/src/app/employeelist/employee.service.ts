@@ -7,7 +7,7 @@ import  'rxjs/add/operator/catch';
 
 @Injectable()
 export class EmployeeService {
-    private _apiUrl: string = 'http://localhost:50000/api/employee';
+    private _apiUrl: string = 'http://10.60.7.157:8080/api/employee';
     constructor(private _http: Http) { }
 
     getEmployees(): Observable<IEmployee[]> {
