@@ -9,7 +9,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('watch-html', function () {
-    gulp.watch(config.app + '**/*.html', function(file) {
+    gulp.watch(config.src + '**/*.html', function(file) {
         var des = convertToTmpPath(file);
 
         return gulp.src(file.path)

@@ -13,6 +13,7 @@ import { EmployeeService } from './employee.service';
 export class EmployeeListComponent implements OnInit {
     public employees: IEmployee[];
     public errorMessage;
+    public employeeFilter;
     private _employeeService;
 
     constructor(employeeService: EmployeeService) {
@@ -20,8 +21,15 @@ export class EmployeeListComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this._employeeService.getEmployees()
-            .subscribe(employees => this.employees = employees,
+        this.employeeFilter = {
+            'Skip': 0,
+            'Take': 5
+        };
+
+        this._employeeService.getEmployees(this.employeeFilter)
+            .subscribe((response) => {
+                this.employees = response.Data;
+            },
             error => this.errorMessage = error);
     }
 }

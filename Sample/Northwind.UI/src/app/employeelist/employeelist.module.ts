@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { EmployeeListComponent } from './index';
 import { HttpModule} from '@angular/http';
+import { PaginationModule } from '../shared/pagination/index';
+
 
 
 @NgModule({
@@ -12,7 +14,8 @@ import { HttpModule} from '@angular/http';
     imports: [
         FormsModule,
         BrowserModule,
-        HttpModule
+        HttpModule,
+        PaginationModule
     ],
     exports: [
         EmployeeListComponent

@@ -23,10 +23,34 @@ namespace Northwind.Web.Api
             _employeeService = employeeService;
         }
 
-        [HttpGet]
-        public IQueryable<Employee> Get()
+        [HttpPost]
+        public GridResponse GetEmployees(GridRequest request)
         {
-            return _employeeService.Queryable();
+            var data = _employeeService.Queryable()
+                .OrderBy(o => o.EmployeeID)
+                .Skip(request.Skip)
+                .Take(request.Take)
+                .ToList();
+
+            var count = _employeeService.Queryable().Count();
+            var gridResponse = new GridResponse()
+            {
+                Data = data,
+                TotalRecords = count
+            };
+            return gridResponse;
         }
+    }
+
+    public class GridRequest
+    {
+        public int Skip { get; set; }
+        public int Take { get; set; }
+    }
+
+    public class GridResponse
+    {
+        public object Data { get; set; }
+        public int TotalRecords { get; set; }
     }
 }
