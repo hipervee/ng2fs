@@ -450,7 +450,9 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <None Include="Properties\PublishProfiles\customProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <None Include="Properties\PublishProfiles\KendoAngularJS.pubxml" />
+    <None Include="Properties\PublishProfiles\localIIS.pubxml" />
     <None Include="Properties\PublishProfiles\longle - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\longle - Web Deploy.pubxml" />
     <Content Include="Scripts\angular.min.js.map" />

@@ -1,9 +1,10 @@
+
 <div class="panel panel-default">
     <div class="panel-heading">
         Employee List
     </div>
     <div class="panel-body">
-        <table class="table table-responsive" *ngIf="employees && employees.length">
+        <table class="table table-responsive" *ngIf="employees.data && employees.data.length">
             <thead>
                 <tr>
                     <th>Employee ID</th>
@@ -12,7 +13,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let employee of employees">
+                <tr *ngFor="let employee of employees.data">
                     <td>{{employee.EmployeeID}}</td>
                     <td>{{employee.LastName + ' , ' + employee.FirstName}}</td>
                     <td>{{employee.Title}}</td>
@@ -21,6 +22,11 @@
         </table>
     </div>
     <div>
-        <as-pager [totalPages]="10"></as-pager>
+        <div class [ngGrid]="{'resizeable': false, 'margins': [5, 10]}">
+            <div *ngFor="let employee of employees.data" [(ngGridItem)]="employees.config">
+                <div class="title">{{employee.title}}</div>
+                <p>{{employee.LastName + ',' + employee.FirstName}}</p>
+            </div>
+        </div>
     </div>
 </div>

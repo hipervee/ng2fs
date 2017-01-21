@@ -11,7 +11,8 @@
     // map tells the System loader where to look for things
     var map = {
         'app': 'src/tmp/app',
-        'test': 'src/tmp/test'
+        'test': 'src/tmp/test',
+		'angular2-grid': 'node_modules/angular2-grid/dist'
     };
 
     // packages tells the System loader how to load when no filename and/or no extension
@@ -24,7 +25,8 @@
         },
         'rxjs': {
             defaultExtension: 'js'
-        }
+        },
+		'angular2-grid': { main: 'main.js',  defaultExtension: 'js' }
     };
 
     // List npm packages here

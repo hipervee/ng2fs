@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { IEmployee } from './employee.model';
 import { EmployeeService } from './employee.service';
 
 
@@ -7,11 +6,14 @@ import { EmployeeService } from './employee.service';
     moduleId: module.id,
     selector: 'as-employeelist',
     templateUrl: 'employeelist.html',
-    providers: [EmployeeService]
+    providers: [EmployeeService],
+    styleUrls: [
+        'employeelist.css'
+    ]
 })
 
 export class EmployeeListComponent implements OnInit {
-    public employees: IEmployee[];
+    public employees: any = {};
     public errorMessage;
     public employeeFilter;
     private _employeeService;
@@ -26,10 +28,18 @@ export class EmployeeListComponent implements OnInit {
             'Take': 5
         };
 
+        this.employees.config = this.getGirdConfig();
+
         this._employeeService.getEmployees(this.employeeFilter)
             .subscribe((response) => {
-                this.employees = response.Data;
+                this.employees.data = response.Data;
             },
             error => this.errorMessage = error);
+    }
+
+    getGirdConfig(): any {
+        return {
+
+        };
     }
 }
