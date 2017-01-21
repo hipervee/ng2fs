@@ -30,4 +30,50 @@
         </ul>
     </div>
 </div>
+
+<div class="box">
+    <data-table id="films-grid"
+        headerTitle="Employees"
+        [items]="employees.data"
+        [itemCount]="employees.count"
+        (reload)="reloadFilms($event)"
+
+        [limit]="8"
+        [sortBy]="'rating'"
+        [sortAsc]="false"
+
+        [selectColumn]="true"
+        [multiSelect]="false"
+        [substituteRows]="false"
+        [expandableRows]="true"
+        [translations]="translations"
+        [indexColumnHeader]="'#'"
+        [selectOnRowClick]="true"
+        >
+        <template #dataTableExpand let-item="item">
+            <div [textContent]="item.Title" style="padding: 5px; color: gray"></div>
+        </template>
+        <data-table-column
+            [property]="'EmployeeID'"
+            [header]="'EmployeeID'"
+            [sortable]="true">
+        </data-table-column>
+        <data-table-column
+            [property]="'FirstName'"
+            [header]="'Name'"
+            [sortable]="true">
+        </data-table-column>
+        <data-table-column
+            [property]="'Title'"
+            [header]="'Title'"
+            [sortable]="true"
+            [cellColors]="cellColor">
+        </data-table-column>
+    </data-table>
+    <div style="margin-top: 10px">
+        <b>Selected:</b>
+        <span *ngIf="detailsTable.selectedRow == null"><i>No item selected</i></span>
+        <span [textContent]="detailsTable.selectedRow && detailsTable.selectedRow.item.Title"></span>
+    </div>
+</div>
 <!-- /.box -->

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { DataTable, DataTableTranslations, DataTableResource } from 'angular-2-data-table';
 import { EmployeeService } from './employee.service';
 
 
@@ -8,18 +9,34 @@ import { EmployeeService } from './employee.service';
     templateUrl: 'employeelist.html',
     providers: [EmployeeService],
     styleUrls: [
-        'employeelist.css'
+        'employeelist.css', 'films.css'
     ]
 })
 
 export class EmployeeListComponent implements OnInit {
-    public employees: any = {};
+    public employees: any = {
+        data: [],
+        count: 0
+    };
     public errorMessage;
     public employeeFilter;
+    employeeResource: any = {};
+
+    translations = <DataTableTranslations>{
+        indexColumn: 'Index column',
+        expandColumn: 'Expand column',
+        selectColumn: 'Select column',
+        paginationLimit: 'Max results',
+        paginationRange: 'Result range'
+    };
+
+    @ViewChild(DataTable) detailsTable;
+
     private _employeeService;
 
     constructor(employeeService: EmployeeService) {
         this._employeeService = employeeService;
+
     }
 
     ngOnInit(): void {
@@ -27,19 +44,15 @@ export class EmployeeListComponent implements OnInit {
             'Skip': 0,
             'Take': 5
         };
+    }
 
-        this.employees.config = this.getGirdConfig();
-
+    reloadFilms(params) {
         this._employeeService.getEmployees(this.employeeFilter)
             .subscribe((response) => {
                 this.employees.data = response.Data;
+                this.employees.count  = response.Data.length;
+                this.employeeResource = new DataTableResource(this.employees.data);
             },
             error => this.errorMessage = error);
-    }
-
-    getGirdConfig(): any {
-        return {
-
-        };
     }
 }

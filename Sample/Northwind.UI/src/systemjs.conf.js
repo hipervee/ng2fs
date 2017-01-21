@@ -12,7 +12,8 @@
     var map = {
         'app': 'src/tmp/app',
         'test': 'src/tmp/test',
-		'angular2-grid': 'node_modules/angular2-grid/dist'
+		'angular2-grid': 'node_modules/angular2-grid/dist',
+		'angular-2-data-table': 'node_modules/angular-2-data-table/dist'
     };
 
     // packages tells the System loader how to load when no filename and/or no extension
@@ -26,7 +27,12 @@
         'rxjs': {
             defaultExtension: 'js'
         },
-		'angular2-grid': { main: 'main.js',  defaultExtension: 'js' }
+		'angular2-grid': { main: 'main.js',  defaultExtension: 'js' },
+		'angular-2-data-table': {
+        format: 'cjs',
+        defaultExtension: 'js',
+        main: 'index.js'
+      }
     };
 
     // List npm packages here
