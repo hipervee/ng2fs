@@ -13,7 +13,8 @@
         'app': 'src/tmp/app',
         'test': 'src/tmp/test',
 		'angular2-grid': 'node_modules/angular2-grid/dist',
-		'angular-2-data-table': 'node_modules/angular-2-data-table/dist'
+		'angular-2-data-table': 'node_modules/angular-2-data-table/dist',
+		'ng2-toasty': 'node_modules/ng2-toasty/bundles/index.umd.js'
     };
 
     // packages tells the System loader how to load when no filename and/or no extension

@@ -1,5 +1,5 @@
 <div class="box">
-    <data-table id="films-grid"
+    <data-table id="employees-grid"
         headerTitle=""
         [items]="employees.data"
         [itemCount]="employees.totalRecords"
@@ -41,6 +41,9 @@
         <b>Selected:</b>
         <span *ngIf="detailsTable.selectedRow == null"><i>No item selected</i></span>
         <span [textContent]="detailsTable.selectedRow && detailsTable.selectedRow.item.title"></span>
+    </div>
+    <div>
+        <a (click)="addToast()">Add Toasts</a>
     </div>
 </div>
 <!-- /.box -->
