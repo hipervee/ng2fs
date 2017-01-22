@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IGrid } from '../shared/models/grid.model';
+import { GridResponse } from '../shared/models/grid.model';
 import { Http, Response } from '@angular/http';
 import { DataTableParams } from 'angular-2-data-table';
 import { Observable } from 'rxjs/Observable';
@@ -31,13 +31,18 @@ export class EmployeeService {
     private _apiUrl: string = 'http://localhost/api/employee/GetEmployees';
     constructor(private _http: Http) { }
 
-    getEmployees(filter: Object): Observable<IGrid> {
+    getEmployees(params: DataTableParams): Observable<GridResponse> {
+        let filter = {
+            skip: params.offset,
+            take: params.limit
+        };
         return this._http.post(this._apiUrl, filter)
-            .map((response: Response) => <IGrid>response.json())
+            .map((response: Response) => <GridResponse>response.json())
             .catch(this.handleError);
     }
 
     query(params: DataTableParams) {
+        console.log(params);
         return this._http.get(this._apiUrl + '?' + paramsToQueryString(params)).toPromise()
             .then((resp: Response) => ({
                 items: resp.json(),

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DataTable, DataTableTranslations, DataTableResource } from 'angular-2-data-table';
 import { EmployeeService } from './employee.service';
+import { GridResponse } from '../shared/models/grid.model';
 
 
 @Component({
@@ -14,12 +15,8 @@ import { EmployeeService } from './employee.service';
 })
 
 export class EmployeeListComponent implements OnInit {
-    public employees: any = {
-        data: [],
-        count: 0
-    };
+    public employees: GridResponse = new GridResponse();
     public errorMessage;
-    public employeeFilter;
     employeeResource: any = {};
 
     translations = <DataTableTranslations>{
@@ -36,22 +33,17 @@ export class EmployeeListComponent implements OnInit {
 
     constructor(employeeService: EmployeeService) {
         this._employeeService = employeeService;
-
     }
 
     ngOnInit(): void {
-        this.employeeFilter = {
-            'Skip': 0,
-            'Take': 5
-        };
+        console.log('Inside Init');
     }
 
-    reloadFilms(params) {
-        this._employeeService.getEmployees(this.employeeFilter)
+    getEmployees(params) {
+        this._employeeService.getEmployees(params)
             .subscribe((response) => {
-                this.employees.data = response.Data;
-                this.employees.count  = response.Data.length;
-                this.employeeResource = new DataTableResource(this.employees.data);
+                this.employees = response;
+                this.employeeResource = new DataTableResource(this.employees.Data);
             },
             error => this.errorMessage = error);
     }

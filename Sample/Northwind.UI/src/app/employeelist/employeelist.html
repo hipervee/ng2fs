@@ -1,42 +1,9 @@
 <div class="box">
-    <div class="box-header with-border">
-        <h3 class="box-title">Employees</h3>
-    </div>
-    <!-- /.box-header -->
-    <div class="box-body">
-        <table class="table table-bordered">
-            <tr>
-                <th style="width: 10px">#</th>
-                <th>Employee Name</th>
-                <th>Title</th>
-                <th style="width: 40px">Home Phone</th>
-            </tr>
-            <tr *ngFor="let employee of employees.data">
-                <td>{{employee.EmployeeID}}.</td>
-                <td>{{employee.LastName + ' , ' + employee.FirstName}}</td>
-                <td>{{employee.Title}}</td>
-                <td>{{employee.HomePhone}}</td>
-            </tr>
-        </table>
-    </div>
-    <!-- /.box-body -->
-    <div class="box-footer clearfix">
-        <ul class="pagination pagination-sm no-margin pull-right">
-            <li><a href="#">&laquo;</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">&raquo;</a></li>
-        </ul>
-    </div>
-</div>
-
-<div class="box">
     <data-table id="films-grid"
         headerTitle="Employees"
-        [items]="employees.data"
-        [itemCount]="employees.count"
-        (reload)="reloadFilms($event)"
+        [items]="employees.Data"
+        [itemCount]="employees.TotalRecords"
+        (reload)="getEmployees($event)"
 
         [limit]="8"
         [sortBy]="'rating'"
