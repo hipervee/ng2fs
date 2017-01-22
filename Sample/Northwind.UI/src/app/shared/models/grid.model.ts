@@ -1,14 +1,14 @@
-export interface IGrid {
-    Data: any[];
-    ToTalRecords: number;
+export interface IGrid<T> {
+    data: T[];
+    totalRecords: number;
 }
 
-export class GridResponse implements IGrid {
-    public Data: any[];
-    public ToTalRecords: number;
+export class GridResponse<T> implements IGrid<T> {
+    public data: T[];
+    public totalRecords: number;
 
     constructor() {
-        this.Data = [];
-        this.ToTalRecords = 0;
+        this.data = null;
+        this.totalRecords = 0;
     }
 }

@@ -1,6 +1,7 @@
-export interface IEmployee {
-    EmployeeID: number;
-    FirstName: string;
-    LastName: string;
-    Title: string;
+export class Employee {
+    employeeID: number;
+    firstName: string;
+    lastName: string;
+    title: string;
 }
+

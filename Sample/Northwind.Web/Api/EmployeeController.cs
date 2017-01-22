@@ -28,8 +28,8 @@ namespace Northwind.Web.Api
         {
             var data = _employeeService.Queryable()
                 .OrderBy(o => o.EmployeeID)
-                .Skip(request.Skip)
-                .Take(request.Take)
+                .Skip(request.Offset)
+                .Take(request.Limit)
                 .ToList();
 
             var count = _employeeService.Queryable().Count();
@@ -44,8 +44,10 @@ namespace Northwind.Web.Api
 
     public class GridRequest
     {
-        public int Skip { get; set; }
-        public int Take { get; set; }
+        public int Offset { get; set; }
+        public int Limit { get; set; }
+        public string SortBy { get; set; }
+        public string SortAsc { get; set; }
     }
 
     public class GridResponse

@@ -1,8 +1,8 @@
 <div class="box">
     <data-table id="films-grid"
         headerTitle="Employees"
-        [items]="employees.Data"
-        [itemCount]="employees.TotalRecords"
+        [items]="employees.data"
+        [itemCount]="employees.totalRecords"
         (reload)="getEmployees($event)"
 
         [limit]="8"
@@ -18,20 +18,20 @@
         [selectOnRowClick]="true"
         >
         <template #dataTableExpand let-item="item">
-            <div [textContent]="item.Title" style="padding: 5px; color: gray"></div>
+            <div [textContent]="item.title" style="padding: 5px; color: gray"></div>
         </template>
         <data-table-column
-            [property]="'EmployeeID'"
+            [property]="'employeeID'"
             [header]="'EmployeeID'"
             [sortable]="true">
         </data-table-column>
         <data-table-column
-            [property]="'FirstName'"
+            [property]="'firstName'"
             [header]="'Name'"
             [sortable]="true">
         </data-table-column>
         <data-table-column
-            [property]="'Title'"
+            [property]="'title'"
             [header]="'Title'"
             [sortable]="true"
             [cellColors]="cellColor">
@@ -40,7 +40,7 @@
     <div style="margin-top: 10px">
         <b>Selected:</b>
         <span *ngIf="detailsTable.selectedRow == null"><i>No item selected</i></span>
-        <span [textContent]="detailsTable.selectedRow && detailsTable.selectedRow.item.Title"></span>
+        <span [textContent]="detailsTable.selectedRow && detailsTable.selectedRow.item.title"></span>
     </div>
 </div>
 <!-- /.box -->

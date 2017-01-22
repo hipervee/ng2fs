@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
@@ -24,8 +25,11 @@ namespace Northwind.Web
 
             var jsonFormatter = config.Formatters.JsonFormatter;
             jsonFormatter.SerializerSettings.Re‌​ferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             config.Formatters.Clear();
             config.Formatters.Add(jsonFormatter);
+
+
         }
     }
 }
