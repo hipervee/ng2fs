@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { DataTable, DataTableTranslations, DataTableResource } from 'angular-2-data-table';
+import { DataTable, DataTableResource } from 'angular-2-data-table';
 import { EmployeeService } from './employee.service';
 import { GridResponse } from '../shared/models/grid.model';
 import { Employee } from './employee.model';
@@ -9,24 +9,13 @@ import {ToastyService, ToastyConfig, ToastOptions, ToastData} from 'ng2-toasty';
     moduleId: module.id,
     selector: 'as-employeelist',
     templateUrl: 'employeelist.html',
-    providers: [EmployeeService, ToastyService],
-    styleUrls: [
-        'employeelist.css', 'films.css'
-    ]
+    providers: [EmployeeService, ToastyService]
 })
 
 export class EmployeeListComponent implements OnInit {
     public employees: GridResponse<Employee> = new GridResponse<Employee>();
     public errorMessage;
     employeeResource: any = {};
-
-    translations = <DataTableTranslations>{
-        indexColumn: 'Index column',
-        expandColumn: 'Expand column',
-        selectColumn: 'Select column',
-        paginationLimit: 'Max results',
-        paginationRange: 'Result range'
-    };
 
     @ViewChild(DataTable) detailsTable;
 

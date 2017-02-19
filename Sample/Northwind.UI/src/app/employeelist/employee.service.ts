@@ -39,15 +39,14 @@ export class EmployeeService {
     }
 
     query(params: DataTableParams) {
-        console.log(params);
-        return this._http.get(this._apiUrl + '?' + paramsToQueryString(params)).toPromise()
+        return setTimeout(this._http.get(this._apiUrl + '?' + paramsToQueryString(params))
+            .toPromise()
             .then((resp: Response) => ({
                 items: resp.json(),
                 count: Number(resp.headers.get('X-Total-Count'))
-            }));
+            })), 5000);
     }
     private handleError(error: Response) {
-        console.log(error);
         return Observable.throw(error.json().error || 'Server Error');
     }
 }

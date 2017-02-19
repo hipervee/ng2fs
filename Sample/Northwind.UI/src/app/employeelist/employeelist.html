@@ -1,49 +1,25 @@
-<div class="box">
-    <data-table id="employees-grid"
-        headerTitle=""
-        [items]="employees.data"
-        [itemCount]="employees.totalRecords"
-        (reload)="getEmployees($event)"
-
-        [limit]="8"
-        [sortBy]="'rating'"
-        [sortAsc]="false"
-
-        [selectColumn]="true"
-        [multiSelect]="false"
-        [substituteRows]="false"
-        [expandableRows]="true"
-        [translations]="translations"
-        [indexColumnHeader]="'#'"
-        [selectOnRowClick]="true"
-        >
-        <template #dataTableExpand let-item="item">
-            <div [textContent]="item.title" style="padding: 5px; color: gray"></div>
-        </template>
-        <data-table-column
-            [property]="'employeeID'"
-            [header]="'EmployeeID'"
-            [sortable]="true">
-        </data-table-column>
-        <data-table-column
-            [property]="'firstName'"
-            [header]="'Name'"
-            [sortable]="true">
-        </data-table-column>
-        <data-table-column
-            [property]="'title'"
-            [header]="'Title'"
-            [sortable]="true"
-            [cellColors]="cellColor">
-        </data-table-column>
-    </data-table>
-    <div style="margin-top: 10px">
-        <b>Selected:</b>
-        <span *ngIf="detailsTable.selectedRow == null"><i>No item selected</i></span>
-        <span [textContent]="detailsTable.selectedRow && detailsTable.selectedRow.item.title"></span>
+<section class="content-header">
+    <h1>Employees</h1>
+</section>
+<section class="content">
+    <div class="box">
+        <data-table id="employees-grid" 
+        headerTitle="" [items]="employees.data"
+        [header]="false"
+        [indexColumn]="false"
+        [showReloading]="true"
+         [itemCount]="employees.totalRecords" (reload)="getEmployees($event)"
+            [limit]="8" [sortBy]="'rating'" [sortAsc]="false" [selectColumn]="true" [multiSelect]="false" [substituteRows]="false"
+            [expandableRows]="false"  [indexColumnHeader]="'#'" [selectOnRowClick]="true">
+            <template #dataTableExpand let-item="item">
+                <div [textContent]="item.title" style="padding: 5px; color: gray"></div>
+            </template>
+            <data-table-column [property]="'employeeID'" [header]="'EmployeeID'" [sortable]="true">
+            </data-table-column>
+            <data-table-column [property]="'firstName'" [header]="'Name'" [sortable]="true">
+            </data-table-column>
+            <data-table-column [property]="'title'" [header]="'Title'" [sortable]="true" [cellColors]="cellColor">
+            </data-table-column>
+        </data-table>
     </div>
-    <div>
-        <a (click)="addToast()">Add Toasts</a>
-    </div>
-</div>
-<!-- /.box -->
+</section>

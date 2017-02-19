@@ -8,3 +8,5 @@ env.json
 /typings
 /src/tmp
 .DS_Store
+/src/**/*.js
+/src/**/*.js.map
